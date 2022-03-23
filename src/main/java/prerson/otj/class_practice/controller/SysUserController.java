@@ -2,8 +2,10 @@ package prerson.otj.class_practice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import prerson.otj.class_practice.mapper.SysUserMapper;
 import prerson.otj.class_practice.pojo.SysUser;
@@ -22,5 +24,15 @@ public class SysUserController {
         modelAndView.setViewName("index");
         System.out.println("进来了");
         return modelAndView;
+    }
+
+
+    @RequestMapping(value = "/sysUser/del",method = {RequestMethod.POST,RequestMethod.GET})
+    @Transactional
+    @ResponseBody
+    public String del(){
+        System.out.println("进来了");
+        sysUserService.deleteByUsername();
+        return "";
     }
 }
