@@ -35,4 +35,12 @@ public class SysUserController {
         sysUserService.deleteByUsername();
         return "";
     }
+
+    @RequestMapping(value = "/sysUser/update",method = {RequestMethod.POST,RequestMethod.GET})
+    @Transactional
+    @ResponseBody
+    public String update(){
+        sysUserService.updateById(135l);
+        return "修改成功";
+    }
 }

@@ -24,5 +24,12 @@ public class SysUserService {
         sysUserMapper.delete(sysUser);
     }
 
+    public void updateById(Long l){
+        SysUser sysUser=new SysUser();
+        sysUser.setUserName("张三丰");
+        sysUser.setNickName("张三丰");
+        sysUser.setUserId(l);
+        sysUserMapper.save(sysUser);
+    }
 
 }
