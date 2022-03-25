@@ -1,6 +1,7 @@
 package prerson.otj.class_practice.common.core.text;
 
-import edu.friday.utils.StringUtils;
+
+import prerson.otj.class_practice.utils.StringUtils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
