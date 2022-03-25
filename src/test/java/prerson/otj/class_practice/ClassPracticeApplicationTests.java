@@ -71,6 +71,14 @@ class ClassPracticeApplicationTests {
     }
 
 
+    @Test
+    @Transactional(timeout = 20)
+    public void testInsert(){
+        SysUser sysUser=new SysUser();
+        sysUser.setUserName("张三丰");
+        sysUser.setNickName("张三丰");
+        sysUserMapper.save(sysUser);
+    }
 
 
 }

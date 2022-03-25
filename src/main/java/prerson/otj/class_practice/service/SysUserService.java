@@ -32,4 +32,7 @@ public class SysUserService {
         sysUserMapper.save(sysUser);
     }
 
+    public void save(SysUser sysUser) {
+        sysUserMapper.save(sysUser);
+    }
 }

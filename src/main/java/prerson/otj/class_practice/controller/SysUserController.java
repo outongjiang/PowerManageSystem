@@ -43,4 +43,15 @@ public class SysUserController {
         sysUserService.updateById(135l);
         return "修改成功";
     }
+    @RequestMapping(value = "/sysUser/insert",method = {RequestMethod.POST,RequestMethod.GET})
+    @Transactional
+    @ResponseBody
+    public String insert(){
+        SysUser sysUser=new SysUser();
+        sysUser.setUserName("张三丰");
+        sysUser.setNickName("张三丰");
+        sysUserService.save(sysUser);
+        return "修改成功";
+    }
+
 }
